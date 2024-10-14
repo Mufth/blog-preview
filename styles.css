@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Figtree', sans-serif;
 }
 
 body {
-    background-color: hsl(47, 88%, 63%);
-    font-family: 'Figtree', sans-serif;
-    font-size: 16px;
+    background-color: hsl(47, 88%, 63%);    
     height: 100vh;
     position: relative;
 }
@@ -15,23 +15,95 @@ body {
 .container {
     position: absolute;
     width: 375px;
+    height: 520px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 8px 8px rgba(0, 0, 0);
+}
+
+@media screen and (max-width: 385px) {
+    .container {
+        width: 90%;
+        height: 500px;
+        font-size: 14px;
+    }
 }
 
 .card {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 1.5rem;
     text-align: left;
 }
 
+.hero-image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category { 
+    background-color: hsl(47, 88%, 63%);
+    border-radius: 4px;
+    padding: 5px 12px;
+    color: hsl(0, 0%, 7%);
+    font-size: 0.85rem;
+    font-weight: 900;
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 0.85rem;
+}
+
+.date {
+    font-size: .85rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 7%);
+    margin-bottom: 1rem;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;   
+}
+
+.course-title:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
+.description {
+    color: hsl(0, 0%, 42%);
+    margin-bottom: 1.5rem;
+    line-height: 150%;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: .75rem;
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 
